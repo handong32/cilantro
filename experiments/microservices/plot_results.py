@@ -5,16 +5,21 @@
 
 from cilantro.ancillary.ms_plotting import plot_ms_results
 
-RESULTS_DIR = 'workdirs_eks'
+RESULTS_DIR = 'workdirs_han'
 ENV_DESCR = 'hotelres'
 TO_PLOT_LEGEND = True
 PLOT_TIME_BOUNDS = (0, 6 * 3600)
 
 
+#METHOD_ORDER = [
+#    'mssile',
+#    'ucbopt',
+#    'msevoopt',
+#    'propfair'
+#    ]
+
 METHOD_ORDER = [
-    'mssile',
     'ucbopt',
-    'msevoopt',
     'propfair'
     ]
 
@@ -22,8 +27,8 @@ METHOD_ORDER = [
 
 METHOD_LEGEND_MARKER_DICT = {
     'propfair': {'colour': 'black', 'linestyle': ':', 'legend': 'Resource-Fair', 'marker':'s'},
-    'mssile': {'colour': 'red', 'linestyle': '-.', 'legend': 'Interleave-Explore', 'marker':'o'},
-    'msevoopt': {'colour': 'darkgreen', 'linestyle': '--', 'legend': 'EvoAlg', 'marker':'^'},
+#    'mssile': {'colour': 'red', 'linestyle': '-.', 'legend': 'Interleave-Explore', 'marker':'o'},
+#    'msevoopt': {'colour': 'darkgreen', 'linestyle': '--', 'legend': 'EvoAlg', 'marker':'^'},
     'ucbopt': {'colour': 'blue', 'linestyle': '-', 'legend': 'Cilantro', 'marker':'x'},
     }
 
