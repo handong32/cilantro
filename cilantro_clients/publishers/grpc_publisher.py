@@ -52,7 +52,12 @@ class GRPCPublisher(BasePublisher):
             sigma = float(data['sigma'])
             event_start_time = float(data['event_start_time'])
             event_end_time = float(data['event_end_time'])
-            debug = str(data['debug'])
+
+            # debug not necessarily provided, try-catch might be better
+            if 'debug' in data:
+                debug = str(data['debug'])
+            else:
+                debug = ''
             msg = utility_update_pb2.UtilityMessage(app_id=self.client_id,
                                                     load=load,
                                                     alloc=alloc,
