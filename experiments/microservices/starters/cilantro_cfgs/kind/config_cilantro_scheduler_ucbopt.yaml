@@ -15,6 +15,7 @@ spec:
       labels:
         app: cilantroscheduler
     spec:
+      nodeName: client1.hand32-210449.bayopsys-pg0.wisc.cloudlab.us
       restartPolicy: Never
       containers:
       - name: cilantroscheduler
